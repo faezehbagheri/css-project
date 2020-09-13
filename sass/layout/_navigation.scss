@@ -1,0 +1,65 @@
+.navigation {
+    height: 7rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1rem solid $color-grey-light-2;
+    color: $color-grey-dark-2;
+
+
+   &__logo-box{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+   }
+
+   &__logo{
+        height: 5.5rem;
+        width: 5.5rem;
+   }
+
+   &__bimsa{
+        font-size: 3rem;
+        font-weight: 700;
+        color: $color-primary;
+        padding-right: 1rem;
+   }
+
+   &__nav{
+       flex: 0 0 45%;
+   }
+
+   &__list{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+   } 
+
+   &__item{
+        list-style: none;
+   }
+
+   &__link{
+        text-decoration: none;
+        font-size: 1.3rem;
+        font-weight: 400;
+   }
+
+   &__account{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+   }
+
+   &__user-photo{     
+        height: 5.5rem;
+        width: 5.5rem;
+   }
+
+   &__text{
+        font-size: 1.3rem;
+        font-weight: 400;
+   }
+}

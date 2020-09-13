@@ -1,0 +1,63 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /*font-size: 16px;*/
+  line-height: 1.7;
+  color: #777; }
+
+.navigation {
+  height: 7rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1rem solid #eee;
+  color: #999; }
+  .navigation__logo-box {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end; }
+  .navigation__logo {
+    height: 5.5rem;
+    width: 5.5rem; }
+  .navigation__bimsa {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #239DEA;
+    padding-right: 1rem; }
+  .navigation__nav {
+    flex: 0 0 45%; }
+  .navigation__list {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between; }
+  .navigation__item {
+    list-style: none; }
+  .navigation__link {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 400; }
+  .navigation__account {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center; }
+  .navigation__user-photo {
+    height: 5.5rem;
+    width: 5.5rem; }
+  .navigation__text {
+    font-size: 1.3rem;
+    font-weight: 400; }
