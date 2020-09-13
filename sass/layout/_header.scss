@@ -42,4 +42,35 @@
         color: $color-primary;
         padding-top: 2.4rem;
     }
+
+    &__extension-fixed{
+        @include fixed-circle(5%);
+    }
+
+    &__extension-photo{
+        height: 6rem;
+        width: 6rem;
+        // margin-top: 1.2rem;;
+    }
+
+    &__extension-text{
+        font-size: 1.6rem;
+        color: $color-primary;
+        margin-top: -1rem;
+    }
+
+    &__coverstion-fixed{
+        @include fixed-circle(89%);
+    }
+    &__coverstion-photo{
+        height: 5rem;
+        width: 5rem;
+        // margin-top: 1.2rem;;
+    }
+
+    &__coverstion-text{
+        font-size: 1.6rem;
+        color: $color-primary;
+        margin-top: -0.4rem;
+    }
 }

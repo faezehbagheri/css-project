@@ -52,6 +52,54 @@ body {
     font-weight: 700;
     color: #239DEA;
     padding-top: 2.4rem; }
+  .header__extension-fixed {
+    background-color: #fff;
+    width: 11rem;
+    height: 11rem;
+    clip-path: circle(50%);
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #239DEA;
+    border-radius: 50%;
+    shape-outside: circle(50%);
+    position: fixed;
+    z-index: 1000; }
+  .header__extension-photo {
+    height: 6rem;
+    width: 6rem; }
+  .header__extension-text {
+    font-size: 1.6rem;
+    color: #239DEA;
+    margin-top: -1rem; }
+  .header__coverstion-fixed {
+    background-color: #fff;
+    width: 11rem;
+    height: 11rem;
+    clip-path: circle(50%);
+    position: absolute;
+    top: 50%;
+    left: 89%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #239DEA;
+    border-radius: 50%;
+    shape-outside: circle(50%);
+    position: fixed;
+    z-index: 1000; }
+  .header__coverstion-photo {
+    height: 5rem;
+    width: 5rem; }
+  .header__coverstion-text {
+    font-size: 1.6rem;
+    color: #239DEA;
+    margin-top: -0.4rem; }
 
 .navigation {
   height: 7rem;
@@ -96,3 +144,9 @@ body {
   .navigation__text {
     font-size: 1.3rem;
     font-weight: 400; }
+
+.section {
+  margin-top: -6.2rem;
+  background: #ffffff;
+  height: 88VH;
+  clip-path: url(#wave1); }
