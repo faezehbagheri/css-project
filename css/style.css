@@ -18,6 +18,41 @@ body {
   line-height: 1.7;
   color: #777; }
 
+.header {
+  background-image: url(../../img/ID625918.png);
+  height: 88vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  position: relative; }
+  .header__box {
+    top: 10%;
+    width: 60%;
+    height: 35rem;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    border-top: 4rem solid #239DEA;
+    border-radius: 3rem; }
+  .header__item {
+    width: 25%;
+    padding: 2rem;
+    background-color: rgba(238, 238, 238, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #239DEA; }
+  .header__photo {
+    height: 6rem;
+    width: 6rem; }
+  .header__text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #239DEA;
+    padding-top: 2.4rem; }
+
 .navigation {
   height: 7rem;
   display: flex;
