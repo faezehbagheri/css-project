@@ -7,8 +7,12 @@
 @import "base/typography";
 @import "base/utilities";
 
+@import "layout/footer";
 @import "layout/header";
 @import "layout/navigation";
 @import "layout/section";
+
+@import "components/button";
+@import "components/fixed-circle";
 
 @import "pages/home";

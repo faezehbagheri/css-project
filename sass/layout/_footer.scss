@@ -1,0 +1,93 @@
+.footer{
+    position: relative;
+    background: $color-grey-light-1;
+    z-index: 9999;
+    
+    &__logo-box{
+        // position: absolute;
+        width: 100%;
+        height: 20rem;
+        background-image: url(../../img/footer.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__logo{
+        height: 14rem;
+        width: 12rem;
+        position: absolute;
+        top: 8%;
+    }
+
+    &__main{
+        height: 44vh;
+        width: 100%;
+        background-color: $color-primary;
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+
+    &__list{
+        list-style-type: none;
+        text-align: center;
+        margin: -7rem 0;
+    }
+
+    &__item{
+        padding: 1rem;
+    }
+
+    &__link{
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.4rem;
+        font-weight: 100;
+    }
+
+    &__center-side{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__main-logo{
+        display: flex;
+
+        &-photo{
+            height: 12rem;
+            width: 13rem;
+            margin: 3rem 1rem;
+        }
+    }
+
+    &__social-logo{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__social-logo-box{
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 50%;
+        background-color: #fff;
+    }
+
+    &__legal{
+        height: 5rem;
+        width: 100%;
+        background-color: #F7D800;
+        border-radius: 6rem 6rem 0 0;
+        margin-top: -5rem;
+        text-align: right;
+
+        &-text{
+            font-size: 1.7rem;
+            font-weight: 100;
+            color: #fff;
+            padding: .7rem 10rem;
+        }
+    }
+}

@@ -2,15 +2,30 @@
 $color-primary: #239DEA;
 
 $color-grey-light-1: #f7f7f7;
-$color-grey-light-2: #eee;
+$color-grey-light-2: #f2f2f2;
 
 $color-grey-dark: #777;
-$color-grey-dark-2: #999;
+$color-grey-dark-2: #707070;
 $color-grey-dark-3: #333;
 
 $color-white: #fff;
 $color-black: #000;
-
+$color-yellow: #fdc500;
 
 // FONT
 $default-font-size: 1.6rem;
+
+$circle-size: 11rem;
+$num-elements: 8;
+$angel: 360/$num-elements;
+$radius: 70rem;
+$rot: 0;
+
+
+$circle-size-small: 2rem;
+$num-elements-small: 3;
+$angel-small: 360/$num-elements-small;
+$radius-small: 15rem;
+
+$class-name-small: -circle-small;
+$class-name: -circle;

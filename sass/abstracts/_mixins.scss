@@ -17,3 +17,32 @@
     z-index: 1000;
     
 }
+
+@mixin round-container($radi) {
+    width: $radi;
+    height: $radi;
+    border: 2px solid $color-primary;
+    border-radius: 50%;
+    transform:  rotate3d(-100,-6,1,-68deg)
+}
+
+@mixin circle($size, $bg-color) {
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    position: absolute;
+    background-color: $bg-color;
+    top: 50%;
+    left: 50%;
+    margin: -($size/2);
+}
+
+@mixin circle-position($num, $angl , $radi ,$class) {
+    @for $i from 1 through $num {
+            
+        &#{$class}:nth-child(#{$i}){
+            transform: rotate($rot * 1deg) translate($radi/2) rotate($rot * 1deg);
+        }
+        $rot: $rot + $angl;
+    }
+}

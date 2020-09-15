@@ -1,8 +1,255 @@
 .section{
-    margin-top: -6.2rem;
-    background: #ffffff;
+    position: relative;
+    background: $color-grey-light-1;
+    height: 250VH;
 
-    height: 88VH;
-    clip-path: url(#wave1);
+    &__wave-background{
+        background-image: url(../../img/background.png);
+        height: 3rem;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-top: -3rem;
+        position: absolute;
+    }
 
+    &__elements{  
+        width: 100%;   
+          
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        position: absolute;
+        margin-top: -10rem;
+        
+        & :not(:last-child){
+            margin-bottom: 2rem;
+        }
+        
+    }
+    &__arrow{
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        border:  2px solid $color-yellow;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-top{
+            margin-top: -3.5rem;
+            background-color: $color-grey-light-2;
+        }
+    }
+
+    &__arrow-photo {
+        width: 1.8rem;
+        height: 1.2rem;
+    }
+
+    &__box{
+        width: 65%;
+        height: 248vh;
+        background-color: $color-white;
+        border-radius: 7rem;
+        box-shadow: 1rem 1rem 4rem rgba($color: #000000, $alpha: .3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // position: absolute;
+    }
+
+    &__feature{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        &-heading{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-main{
+            width: 100%;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-around;
+            align-items: flex-end;
+        }
+
+        &-box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &-photo{
+            height: 14rem;
+            width: 14rem;
+        }
+
+        &-text{
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: $color-grey-dark-2;
+        }
+    }
+
+    &__reminder{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        &-topborder{
+            background-image: url(../../img/circle.png);
+            height: 3.5rem;
+            width: 85%;
+            background-size: cover;
+        }
+        &-main{
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 85%;
+            box-shadow:0 1.6rem 4rem rgba(0, 0, 0, .04);;
+        }
+
+        &-box{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            width: 30%;
+            padding: 1.5rem 0;
+        }
+
+        &-input{
+            width: 25rem;
+            height: 5rem;
+            border: 1px solid $color-primary;
+            border-radius: 1rem;
+            box-shadow:  0 8px 16px rgba(0, 0, 0, .16);
+
+            &::placeholder{
+                text-align: right;
+                padding-right: 2rem;
+                font-size: 1.2rem;
+                font-weight: 700;
+            }
+
+            &:focus{
+
+                border: 1px solid $color-primary;
+                border-radius: 1rem;
+            }
+        }
+
+        &-label{
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: $color-primary;
+            margin-right: 2rem;
+        }
+
+        &-btn{
+            border-radius: 1rem;
+            border: none;
+            color: #fff;
+            width: 25rem;
+            height: 5rem;
+            font-size: 2rem;
+            font-weight: 700;
+            background-color: $color-primary;
+        }
+    }
+
+    &__teammate{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-main{
+            position: relative;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+
+        &-logo{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &-photo{
+            height: 8rem;
+            width: 8rem;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -40%);
+            z-index: 100;
+        }
+
+        &-container-small{
+            @include round-container($radius-small);
+        }
+
+        &-circle-small{
+            @include circle($circle-size-small, $color-yellow);
+        }
+
+        @include circle-position($num-elements-small, $angel-small, $radius-small, $class-name-small);
+
+        &-container{
+            @include round-container($radius);
+        }
+
+        &-circle{
+            @include circle($circle-size, $color-primary);
+        }
+
+        @include circle-position($num-elements, $angel, $radius, $class-name);
+
+        &-introduction{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            height: 18rem;
+            background-color: $color-grey-light-1;
+            border-radius: 2rem;
+        }
+
+        &-text{
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: $color-grey-dark-2;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        &-btn{
+            border-radius: 1rem;
+            border: none;
+            color: #fff;
+            width: 13rem;
+            height: 3rem;
+            font-size: 1.3rem;
+            font-weight: 100;
+            background-color: rgba($color: $color-primary, $alpha: .55);
+            transition: all .3s;
+
+            &:hover{
+                background-color: $color-primary;
+            }
+        }
+    }
+    
 }
