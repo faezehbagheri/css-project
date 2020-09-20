@@ -4,14 +4,32 @@
     z-index: 9999;
     
     &__logo-box{
-        // position: absolute;
         width: 100%;
         height: 20rem;
         background-image: url(../../img/footer.png);
         background-size: cover;
         background-repeat: no-repeat;
-        display: flex;
-        justify-content: center;
+
+
+        @include respond(tab-port){
+            background-position: center;
+        }
+
+        @include respond(phone){
+            background-image: linear-gradient($color-primary-dark-1 0%,
+                                            $color-primary-dark-1 50%,
+                                            $color-primary-dark-2 50%
+            );
+            height: 5rem;
+
+            &::after{
+                content: "بیمسا";
+                font-size: 2.5rem;
+                color: #fff;
+                position: absolute;
+                top: 5%;
+            }
+        }
     }
 
     &__logo{
@@ -19,22 +37,42 @@
         width: 12rem;
         position: absolute;
         top: 8%;
+
+        @include respond(tab-land){ top: 4%; }
+
+        @include respond(smallest){ display: none; }
     }
 
-    &__main{
+    &__main-desktop{
         height: 44vh;
         width: 100%;
         background-color: $color-primary;
         width: 100%;
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-around;
+
+
+        @include respond(tab-land){ height: 35vh; }
+
+        @include respond(phone){ display: none !important; }
+    }
+
+    &__main-mobile{
+        display: none !important;
+
+        @include respond(phone){
+            display: flex !important;
+            height: 22vh;
+            width: 100%;
+            background-color: $color-primary;
+            width: 100%;
+        }
     }
 
     &__list{
         list-style-type: none;
         text-align: center;
-        margin: -7rem 0;
+        margin: -9rem 0;
+
+        @include respond(phone){ margin: 0; }
     }
 
     &__item{
@@ -48,14 +86,7 @@
         font-weight: 100;
     }
 
-    &__center-side{
-        display: flex;
-        flex-direction: column;
-    }
-
     &__main-logo{
-        display: flex;
-
         &-photo{
             height: 12rem;
             width: 13rem;
@@ -63,16 +94,19 @@
         }
     }
 
-    &__social-logo{
-        display: flex;
-        justify-content: space-around;
+    &__main-logo-mobile{
+        &-photo{
+            height: 10rem;
+            width: 11rem;
+        }
     }
 
+
     &__social-logo-box{
-        height: 4.5rem;
-        width: 4.5rem;
+        height: 3.5rem;
+        width: 3.5rem;
         border-radius: 50%;
-        background-color: #fff;
+        margin: 0 1.5rem;
     }
 
     &__legal{
@@ -84,10 +118,18 @@
         text-align: right;
 
         &-text{
-            font-size: 1.7rem;
+            font-size: $default-font-size;
             font-weight: 100;
             color: #fff;
             padding: .7rem 10rem;
+        }
+
+
+        @include respond(phone){
+            margin: 0;
+            background-color: $color-primary;
+            border-radius:0;
+            border-top: 1px solid #fff;
         }
     }
 }

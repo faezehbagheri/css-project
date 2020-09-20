@@ -9,10 +9,14 @@
 
 @import "layout/footer";
 @import "layout/header";
+@import "layout/navigation-mobile";
 @import "layout/navigation";
 @import "layout/section";
 
-@import "components/button";
-@import "components/fixed-circle";
+@import "components/grid";
+@import "components/orbit";
+@import "components/section-feature";
+@import "components/section-reminder";
+@import "components/section-teammate";
 
 @import "pages/home";
